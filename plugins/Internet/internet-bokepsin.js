@@ -44,7 +44,7 @@ const handler = async (m, { conn, args, usedPrefix, text, command }) => {
   (handler.command = /^(bokepsin)$/i);
 export default handler;
 async function searchBokepsin(q) {
-  const url = "https://bokepsin.website/search/" + q,
+  const url = "https://bokepsin.biz/search/" + q,
     response = await fetch(url),
     html = await response.text(),
     $ = cheerio.load(html);
