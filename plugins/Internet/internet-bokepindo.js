@@ -45,7 +45,7 @@ const handler = async (m, { conn, args, usedPrefix, text, command }) => {
 export default handler;
 async function searchBokepindo(s) {
   try {
-    const response = await fetch("https://bokepindo13.pro/?s=" + s);
+    const response = await fetch("https://bokepindo13.stream/?s=" + s);
     if (!response.ok) throw new Error("Failed to fetch data");
     const $ = cheerio.load(await response.text());
     return $("article[data-video-uid]")
